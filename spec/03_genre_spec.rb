@@ -32,8 +32,8 @@ describe "Genre" do
       jay_z = Artist.new("Jay-Z")
       rap = Genre.new("rap")
       ninety_nine_problems = Song.new("99 Problems", rap)
-      rap.add_song(ninety_nine_problems)
-      jay_z.add_song(ninety_nine_problems) #i added this to make it pass
+
+      jay_z.add_song(ninety_nine_problems) 
       expect(rap.artists).to include(jay_z)
       expect(rap.songs.first.artist).to eq(jay_z)
     end
